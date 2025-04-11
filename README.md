@@ -30,44 +30,35 @@ Two classification algorithms—K-Nearest Neighbors (KNN) and Support Vector Mac
 ## 🔍 Main Features
 
 ### 1. Match Filtering for South Korea
-- Extracts matches where South Korea is either the home or away team
-- Aggregates the number of wins, draws, and losses against each opponent
+- Filters matches where South Korea is either the home or away team
+- Aggregates win/draw/loss stats per opponent
 
-### 2. Win Rate by Opponent
-- Calculates South Korea’s win rate against each country
-- Ranks opponents based on win percentage
-- Visualizes win rates using bar plots
-
+### 2. Win Rate by Opponent  
 <p align="center">
   <img src="./assets/feature_importance_barplot.png" alt="Win Rate by Opponent" width="700"/>
 </p>
 
+- Calculates South Korea’s win rate against each country
+- Sorts and visualizes win percentages using bar plots
+
 ### 3. Match Outcome Prediction
-- Applies KNN and SVM classifiers to predict results (Win / Draw / Loss)
-- Evaluates model performance using confusion matrix, accuracy, and precision metrics
 
-#### 📋 SVM Model Evaluation
+- Uses **KNN** and **SVM** classifiers to predict match outcomes (Win / Draw / Loss)
+- Evaluates model performance with accuracy, kappa, and balanced accuracy
 
-- Text-based output from SVM model (e.g., confusion matrix, accuracy, sensitivity)
-
+#### 🧾 SVM Model Output (Text)
 <p align="center">
-  <img src="./assets/svm_conf_matrix_text_output.png" alt="SVM Metrics" width="700"/>
+  <img src="./assets/svm_confusion_matrix_text_output.png" alt="SVM Confusion Matrix Output" width="650"/>
 </p>
 
 #### 🔥 SVM Confusion Matrix (Heatmap)
-
 <p align="center">
-  <img src="./assets/svm_conf_matrix_heatmap.png" alt="SVM Confusion Matrix" width="500"/>
+  <img src="./assets/svm_confusion_matrix_heatmap.png" alt="SVM Confusion Matrix Heatmap" width="500"/>
 </p>
 
----
-
-## 📊 Visual Comparisons
-
-### Model Confusion Matrix (SVM Zoomed)
-
+#### 🔎 Zoomed View
 <p align="center">
-  <img src="./assets/svm_conf_matrix_heatmap_zoomed.png" alt="Zoomed SVM Confusion Matrix" width="500"/>
+  <img src="./assets/svm_confusion_matrix_heatmap_zoomed.png" alt="Zoomed Confusion Matrix" width="500"/>
 </p>
 
 ---
@@ -79,7 +70,7 @@ Two classification algorithms—K-Nearest Neighbors (KNN) and Support Vector Mac
 | KNN   | 1.000    | 1.0    | 1.000             |
 | SVM   | 1.000    | 1.0    | 1.000             |
 
-> ⚠️ Note: Perfect accuracy may indicate potential overfitting or class imbalance. Additional validation is recommended.
+> ⚠️ Note: Perfect accuracy might indicate overfitting or a non-complex dataset. Consider cross-validation for better generalization.
 
 
 
